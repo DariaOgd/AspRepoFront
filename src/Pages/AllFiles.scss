@@ -1,0 +1,74 @@
+/* AllFiles.scss */
+
+.all-files {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    padding: 2rem;
+    background-color: #f9f9f9;
+    min-height: 100vh;
+  }
+  
+  .files-container {
+    width: 90%;
+    max-width: 1200px;
+    display: grid;
+    grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+    gap: 2rem;
+    margin-top: 2rem;
+  }
+  
+  .file-card {
+    background-color: #fff;
+    padding: 2rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    text-align: center;
+    transition: transform 0.3s ease;
+  }
+  
+  .file-card:hover {
+    transform: translateY(-5px);
+  }
+  
+  .file-card h3 {
+    margin: 0 0 1rem;
+    font-size: 1.25rem;
+    color: #333;
+  }
+  
+  .file-card p {
+    margin: 0.5rem 0;
+    color: #666;
+  }
+  
+  .file-card button {
+    padding: 0.75rem 1.5rem;
+    margin-top: 1rem;
+    background-color: #007bff;
+    color: #fff;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s ease;
+  }
+  
+  .file-card button:hover {
+    background-color: #0056b3;
+  }
+  
+  h2 {
+    font-size: 2rem;
+    color: #333;
+    margin-bottom: 1rem;
+  }
+  
+  .loading,
+  .error {
+    font-size: 1.5rem;
+    color: #333;
+  }
+  

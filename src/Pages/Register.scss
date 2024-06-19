@@ -1,0 +1,71 @@
+.register {
+    height: 100vh;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+  
+    form {
+      border-radius: 25px;
+      background-color: rgba(255, 255, 255);
+      display: flex;
+      flex-direction: column;
+      align-items: center;
+      gap: 10px;
+      padding: 20px;
+      width: 50%;
+      height: 60%;
+      transition: box-shadow 0.3s ease; 
+
+      &:hover{
+        box-shadow: 0  30px 40px rgba(0,0,0,.2);
+      }
+  
+      input {
+        background-color: rgba(130, 203, 240, 0);
+        border: 1px solid rgba(194, 217, 255, 0.5);
+        border-radius: 25px;
+        padding: 10px;
+        width: 60%;
+      }
+  
+      button {
+        margin-top: 10px;
+        width: 60%;
+        border: none;
+        padding: 12px;
+        color: rgb(96, 96, 96);
+        border-radius: 25px;
+        background-color: rgb(194, 217, 255);
+        cursor: pointer;
+        transition: background-color 0.3s ease;
+  
+        &:hover {
+          background-color: rgb(147, 187, 251);
+        }
+      }
+  
+      .error-message {
+        color: red;
+        font-size: 14px;
+        margin-top: 5px;
+      }
+  
+      a {
+        cursor: pointer;
+        font-size: 12px;
+        margin: 16px;
+        text-decoration: none;
+        color: black;
+  
+        &:hover {
+          color: rgb(101, 160, 254);
+        }
+      }
+    }
+  
+    .signup {
+      font-size: 30px;
+      color: rgb(168, 193, 234);
+      font-weight: bold;
+    }
+  }

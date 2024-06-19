@@ -1,0 +1,84 @@
+.notes-popup-background {
+  position: fixed;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  background-color: rgba(0, 0, 0, 0.5);
+  display: flex;
+  justify-content: center;
+  align-items: center;
+  z-index: 9999;
+}
+
+.notes-popup {
+  background-color: white;
+  padding: 40px;
+  border-radius: 20px;
+  box-shadow: 0 0 10px rgba(0, 0, 0, 0.2);
+  max-width: 60%;
+  max-height: 80%;
+  overflow: auto;
+  z-index: 10000;
+}
+
+h2 {
+  color: black;
+  text-align: center;
+}
+
+p {
+  color: black;
+  text-align: justify;
+  padding: 1rem;
+  font-size: 1rem;
+}
+
+#close-btn {
+  border-radius: 9px;
+  background-color: rgb(89, 187, 240);
+  border: none;
+  width: 6rem;
+  height: 2rem;
+  color: white;
+  cursor: pointer;
+  margin-top: 1rem;
+  display: block;
+  margin-left: auto;
+  margin-right: auto;
+}
+
+#close-btn:hover {
+  background-color: rgb(62, 136, 221);
+}
+
+.top-of-card {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+}
+
+#university {
+  margin: 0;
+  padding: 10px;
+  font-weight: bold;
+}
+
+.edit-icon {
+  cursor: pointer;
+  color: green;
+  margin-right: 10px;
+}
+
+.edit-icon:hover {
+  color: darkgreen;
+}
+
+.delete-icon {
+  cursor: pointer;
+  color: red;
+}
+
+.delete-icon:hover {
+  color: darkred;
+}

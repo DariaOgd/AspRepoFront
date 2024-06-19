@@ -1,0 +1,7 @@
+{
+    "title": "notatki z chemii",
+    "noteBody": "ASP that successfully interacts with my MongoDB Atlas database. However, I am having difficulty finding information online on how to bring everything together. I tried making the backend behave like a public API publishing it with azure so I would just consume it in React and sort of keep them separate, but wasn't successful, I can't make it return a JSON file, plus I'm afraid it will be lacking security. The projects doesn't require a very complex backend, it just have to be connected to a back end of my making. Can someone explain to me how to connect my React app with the",
+    "isPublic": true,
+    "university": "UG",
+    "categoryId": "3fa85f64-5717-4562-b3fc-2c963f66afa6"
+  }

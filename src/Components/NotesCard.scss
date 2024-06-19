@@ -1,0 +1,77 @@
+.card {
+    width: 20rem;
+    height: 15rem;
+    border-radius: 4px;
+    background-color:white;
+    position: relative;
+    cursor: pointer;
+  &:hover{
+   // border: 4px solid rgb(220, 220, 220);
+    box-shadow: 0 30px 40px rgba(0,0,0,.3);
+  }
+  hr {
+    background-color: rgb(216, 216, 216) !important;
+    color: rgb(216, 216, 216);
+    border-top-color: rgb(216, 216, 216);
+    border-right-color: rgb(216, 216, 216);
+    border-bottom-color: rgb(216, 216, 216);
+    border-left-color: rgb(216, 216, 216);
+    height: 1px;
+    position: relative !important;
+  }
+  
+  
+    .top-of-card {
+      height: 15%;
+     // position: relative; 
+  
+      #university{
+        font-size: 9px;
+        color: rgb(154, 154, 154);
+        //position: absolute;
+       text-align: right;
+       padding-top: 14px;
+       padding-right:15px;
+       margin-left:25px;
+
+      }
+    }
+    .bottom-of-card{
+
+    }
+  }
+  
+  .link {
+    width: 256px !important;
+    height: 15rem;
+    text-decoration: none !important;
+    
+  }
+#title{
+    text-align: center;
+    margin:5px;
+    padding-top: 5px;
+    font-size: 15;
+    font-weight: bold;
+    color:black;
+    text-decoration: none !important;
+}
+  #notebody{
+    padding:10px 20px 8px;
+    margin:5px;
+    font-size: 13px;
+    text-align: justify;
+    color:black;
+    text-decoration: none !important;
+  }
+
+  #username{
+    font-size: 10px;
+    color:gray;
+    text-align: left;
+    margin-bottom: 15px;
+    //margin-left:15px;
+    //padding:0px 5px 10px;
+    //padding-top: 14px;
+    padding-left:15px;
+  }
