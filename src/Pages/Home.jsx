@@ -73,49 +73,40 @@ const Home = () => {
     }
   };
 
+  const filteredNotes = notes.filter(note => 
+    note.title?.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
+  const filteredFiles = randomFiles.filter(file => 
+    file.title?.toLowerCase().includes(searchQuery.toLowerCase())
+  );
+
   return (
     <div>
-      <Navbar />
+      <Navbar setSearchQuery={setSearchQuery} />
       <div className='top-div'>
-        <h1>Share and Discover Knowledge</h1>
-        <p>Join our community to access and share your study notes and resources.</p>
+        <h1 id="heading-1">Share and Discover Knowledge</h1>
+        <p id="join-p">Join our community to access and share your study notes and resources.</p>
       </div>
       <div className="categories-div">
-        <h3>Categories</h3>
+        <h3 id="cat-heading">Categories</h3>
         <ul>
           <li onClick={() => setSelectedCategory(null)}>All</li>
           {categories.map((category) => (
-            <li key={category.id} onClick={() => setSelectedCategory(category.id)}>
+            <li key={category.id} id="li-cat" onClick={() => setSelectedCategory(category.id)}>
               {category.name}
             </li>
           ))}
         </ul>
       </div>
-      <h4>Files</h4>
-      <div className="files-div">
-        {filesLoading ? (
-          "loading"
-        ) : filesError ? (
-          <div>{filesError.message || JSON.stringify(filesError)}</div>
-        ) : (
-          randomFiles.map((file) => (
-            <div key={file.id} className="file-card">
-              <h3>{file.title}</h3>
-              <p>{file.university}</p>
-              <p>{file.category}</p>
-              <button onClick={() => handleOpenFile(file.id)}>Open</button>
-            </div>
-          ))
-        )}
-      </div>
-      <h3>Notes</h3>
+      <h4 id="heading-4">Notes</h4>
       <div className='notes-div'>
         {notesLoading ? (
           "loading"
         ) : notesError ? (
           <div>{notesError.message || JSON.stringify(notesError)}</div>
         ) : (
-          notes.map((note) => (
+          filteredNotes.map((note) => (
             <NotesCard
               key={note._id}
               note={note}
@@ -132,6 +123,23 @@ const Home = () => {
           onDelete={handleDelete}
         />
       )}
+      <h4 id="heading-4">Files</h4>
+      <div className="files-div">
+        {filesLoading ? (
+          "loading"
+        ) : filesError ? (
+          <div>{filesError.message || JSON.stringify(filesError)}</div>
+        ) : (
+          filteredFiles.map((file) => (
+            <div key={file.id} className="file-card">
+              <h3>{file.title}</h3>
+              <p>{file.university}</p>
+              <p>{file.category}</p>
+              <button onClick={() => handleOpenFile(file.id)}>Open</button>
+            </div>
+          ))
+        )}
+      </div>
     </div>
   );
 }

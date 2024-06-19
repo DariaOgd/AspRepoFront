@@ -104,7 +104,9 @@
 
 .navbar__dropdown a:hover,
 .navbar__dropdown button:hover {
-  background-color: #f1f1f1;
+  //background-color: #f1f1f1;
+  color:rgb(108, 190, 248);
+  width:5rem;
 }
 
 .navbar__user:hover .navbar__dropdown,
@@ -115,3 +117,18 @@
 .navbar__user {
   margin-right: 100px;
 }
+#logo{
+  text-decoration: none;
+}
+
+/*
+#logout-button{
+  justify-content: center !important;
+  text-align: center !important; 
+  &:hover{
+    text-align: center !important;
+    background-color: red !important;
+    color:white !important;
+  }
+}
+*/

@@ -3,9 +3,8 @@ import './Navbar.scss';
 import { Link, useNavigate } from "react-router-dom";
 import newRequest from "../utils/newRequest";
 
-const Navbar = ({ setSearchQuery }) => {
+const Navbar2 = ({}) => {
   const [parsedUser, setParsedUser] = useState(null);
-  const [searchInput, setSearchInput] = useState(""); 
 
   useEffect(() => {
     const currentUser = localStorage.getItem("currentUser");
@@ -35,23 +34,11 @@ const Navbar = ({ setSearchQuery }) => {
     }
   };
 
-  const handleSearch = (e) => {
-    setSearchInput(e.target.value);
-    setSearchQuery(e.target.value); 
-  };
 
   return (
     <nav className="navbar">
       <Link to="/" id="logo"><h2 id="logo">Notely</h2></Link>
-      <div className="navbar__search">
-        <input 
-          type="text" 
-          placeholder="Search..." 
-          className="navbar__input" 
-          value={searchInput}
-          onChange={handleSearch}
-        />
-      </div>
+      
       <div className="navbar__user">
         {parsedUser ? (
           <>
@@ -77,4 +64,4 @@ const Navbar = ({ setSearchQuery }) => {
   );
 };
 
-export default Navbar;
+export default Navbar2;

@@ -3,6 +3,7 @@ import { useMutation, useQuery, useQueryClient } from "@tanstack/react-query";
 import newRequest from "../utils/newRequest";
 import { useNavigate } from "react-router-dom";
 import universities from '../data/universities';
+import Navbar2 from '../Components/Navbar2';
 import './AddNotes.scss';
 
 const AddNotes = () => {
@@ -44,7 +45,8 @@ const AddNotes = () => {
 
   return (
     <div className="add-notes">
-      <div className="container">
+      <Navbar2></Navbar2>
+      <div className="container" id="add-notes-cont">
         <h1>Add New Note</h1>
         {isLoadingCategories && <p>Loading categories...</p>}
         {categoriesError && <p>Error loading categories</p>}
@@ -73,16 +75,18 @@ const AddNotes = () => {
               required
             />
           </div>
-          <div className="form-group">
-            <label htmlFor="isPublic">Is Public?</label>
-            <input
-              type="checkbox"
-              id="isPublic"
-              name="isPublic"
-              checked={isPublic}
-              onChange={(e) => setIsPublic(e.target.checked)}
-            />
-            <label htmlFor="isPublic">Yes</label>
+          <div className="form-group form-group-inline">
+            <label htmlFor="isPublic">Do you want your notes to be public?</label>
+            <div className="checkbox-container">
+              <input
+                type="checkbox"
+                id="isPublic"
+                name="isPublic"
+                checked={isPublic}
+                onChange={(e) => setIsPublic(e.target.checked)}
+              />
+              <label htmlFor="isPublic" className="checkbox-label">Yes</label>
+            </div>
           </div>
           <div className="form-group">
             <label htmlFor="university">University</label>
@@ -126,3 +130,4 @@ const AddNotes = () => {
 };
 
 export default AddNotes;
+

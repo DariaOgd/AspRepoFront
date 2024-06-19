@@ -4,6 +4,7 @@ import newRequest from '../utils/newRequest';
 import { useNavigate } from 'react-router-dom';
 import universities from '../data/universities';
 import './AddFiles.scss';
+import Navbar2 from '../Components/Navbar2';
 
 const AddFiles = () => {
   const [file, setFile] = useState(null);
@@ -58,6 +59,7 @@ const AddFiles = () => {
 
   return (
     <div className="add-files">
+      <Navbar2/>
       <div className="container">
         <h1>Add New File</h1>
         {isLoadingCategories && <p>Loading categories...</p>}
@@ -125,6 +127,7 @@ const AddFiles = () => {
           </button>
         </form>
       </div>
+      <div id="bootom-div"></div>
     </div>
   );
 };

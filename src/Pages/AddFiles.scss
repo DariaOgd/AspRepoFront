@@ -1,0 +1,97 @@
+.add-files {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+  }
+  
+  .container {
+    margin-top: 5rem;
+    background-color: #fff;
+    padding: 1.8rem;
+    border-radius: 10px;
+    box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    width: 100%;
+    max-width: 600px;
+  }
+  
+  h1 {
+    text-align: center;
+    margin-bottom: 2rem;
+    color: #333;
+  }
+  
+  .form-group {
+    margin-bottom: 1.5rem;
+  }
+  
+  .form-group label {
+    display: block;
+    margin-bottom: 0.5rem;
+    font-weight: bold;
+    color: #333;
+  }
+  
+  .form-group input,
+  .form-group textarea,
+  .form-group select {
+    width: 100%;
+    padding: 0.75rem;
+    border: 1px solid #ccc;
+    border-radius: 5px;
+    font-size: 1rem;
+    color: #4e5153;
+    transition: border-color 0.3s;
+  }
+  
+  .form-group textarea {
+    height: 200px;
+    resize: vertical;
+  }
+  
+  .form-group input:focus,
+  .form-group textarea:focus,
+  .form-group select:focus {
+    border-color: #7dade1;
+    outline: none;
+  }
+  
+  .form-group input[type="checkbox"] {
+    width: auto;
+    margin-right: 0.5rem;
+  }
+  
+  button[type="submit"] {
+    display: block;
+    width: 100%;
+    padding: 0.75rem;
+    background-color: rgb(194, 217, 255);
+    color: #000000;
+    border: none;
+    border-radius: 5px;
+    font-size: 1rem;
+    cursor: pointer;
+    transition: background-color 0.3s;
+  }
+  
+  button[type="submit"]:hover {
+    background-color: rgb(147, 187, 251);
+  }
+  
+  .form-group-inline {
+    display: flex;
+    align-items: center;
+  }
+  
+  .checkbox-container {
+    display: flex;
+    align-items: center;
+    margin-left: 0.5rem;
+  }
+  
+  .checkbox-label {
+    margin-left: 0.5rem;
+  }
+#bottom-div{
+    margin-top: 3rem;
+}  

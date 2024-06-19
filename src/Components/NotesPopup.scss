@@ -39,13 +39,14 @@ p {
   background-color: rgb(89, 187, 240);
   border: none;
   width: 6rem;
-  height: 2rem;
+  //height: 50%;
   color: white;
   cursor: pointer;
   margin-top: 1rem;
   display: block;
   margin-left: auto;
   margin-right: auto;
+  text-align: center;
 }
 
 #close-btn:hover {
@@ -67,7 +68,8 @@ p {
 .edit-icon {
   cursor: pointer;
   color: green;
-  margin-right: 10px;
+ // margin-left: 46rem;
+  margin-left:78%;
 }
 
 .edit-icon:hover {
@@ -77,6 +79,8 @@ p {
 .delete-icon {
   cursor: pointer;
   color: red;
+ // margin-left:0.3rem;
+  margin-left:1% ;
 }
 
 .delete-icon:hover {

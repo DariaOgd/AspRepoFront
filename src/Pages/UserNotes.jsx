@@ -3,7 +3,8 @@ import { useParams } from "react-router-dom";
 import newRequest from "../utils/newRequest";
 import NotesCard from '../Components/NotesCard';
 import './UserNotes.scss';
-import Navbar from '../Components/Navbar';
+import Navbar2 from '../Components/Navbar2';
+
 function UserNotes() {
   const { userId } = useParams();
   const [userNotes, setUserNotes] = useState([]);
@@ -40,9 +41,9 @@ function UserNotes() {
 
   return (
     <div className="user-notes">
-            <Navbar />
+            <Navbar2 />
+            <h2 id="heading-2">Your Notes</h2>
       <div className="notes-container">
-        <h2>Your Notes</h2>
         {userNotes.length > 0 ? (
           userNotes.map((note) => (
             <NotesCard key={note.id} note={note} />

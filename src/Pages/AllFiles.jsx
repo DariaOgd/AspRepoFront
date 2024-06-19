@@ -1,7 +1,7 @@
 import React, { useState, useEffect } from 'react';
 import newRequest from '../utils/newRequest';
-import Navbar from '../Components/Navbar';
-import './AllFiles.scss'; // Import the new CSS file
+import './AllFiles.scss';
+import Navbar2 from '../Components/Navbar2';
 
 const AllFiles = () => {
   const [files, setFiles] = useState([]);
@@ -56,16 +56,17 @@ const AllFiles = () => {
   if (error) return <div className="error">Error: {error}</div>;
 
   return (
+    <div id="whole-page">
+      <Navbar2 />
+      <h2 id="heading-2">All Files</h2>
     <div className="all-files">
-      <Navbar />
       <div className="files-container">
-        <h2>All Files</h2>
         {files.length > 0 ? (
           files.map((file) => (
             <div key={file.id} className="file-card">
               <h3>{file.title}</h3>
               <p>{file.university}</p>
-              <p>{file.category}</p>
+              <p id="kategoria">{file.categoryId}</p>
               <button onClick={() => handleOpenFile(file.id)}>Open</button>
               <button onClick={() => handleDownload(file.id, file.fileName)}>Download</button>
             </div>
@@ -75,7 +76,9 @@ const AllFiles = () => {
         )}
       </div>
     </div>
+    </div>
   );
 }
 
 export default AllFiles;
+

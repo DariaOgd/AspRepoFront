@@ -1,6 +1,8 @@
 import React, { useState, useEffect } from 'react';
 import newRequest from '../utils/newRequest';
 import { useParams } from 'react-router-dom';
+import './UserFiles.scss';
+import Navbar2 from '../Components/Navbar2';
 
 const UserFiles = () => {
   const { userId } = useParams();
@@ -66,8 +68,9 @@ const UserFiles = () => {
 
   return (
     <div className="user-files">
+      <Navbar2/>
+      <h2 id="heading-2">Your Files</h2>
       <div className="files-container">
-        <h2>Your Files</h2>
         {files.length > 0 ? (
           files.map((file) => (
             <div key={file.id} className="file-card">

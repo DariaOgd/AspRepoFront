@@ -1,11 +1,8 @@
-/* AllFiles.scss */
-
-.all-files {
+.user-files {
     display: flex;
     flex-direction: column;
     align-items: center;
     padding: 2rem;
-    //background-color: #f9f9f9;
     min-height: 100vh;
   }
   
@@ -14,7 +11,7 @@
     max-width: 1200px;
     display: grid;
     grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
-    //gap: 1rem;
+    gap: 2rem; /* Added a gap between file cards */
     margin-top: 2rem;
   }
   
@@ -46,10 +43,11 @@
   }
   
   .file-card button {
+    width:80%;
     padding: 0.75rem 1.5rem;
     margin-top: 1rem;
-    background-color: rgb(194, 217, 255);
-    color: #000000;
+    background-color: #007bff;
+    color: #fff;
     border: none;
     border-radius: 5px;
     cursor: pointer;
@@ -57,10 +55,7 @@
   }
   
   .file-card button:hover {
-
-      background-color: rgb(147, 187, 251); 
-    
-    
+    background-color: #0056b3;
   }
   
   h2 {
@@ -73,8 +68,4 @@
   .error {
     font-size: 1.5rem;
     color: #333;
-  }
-  
-  #heading-2{
-    margin-top: 5rem;;
   }
